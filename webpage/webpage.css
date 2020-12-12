@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins','Verdana','Segoe UI', 
+    Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-container {
+    background: #FFFFFF;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    height: 72px;
+    margin-top: -62px;
+}
+
+.nav {
+    width: 83%;
+    height: 72px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav .logo {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3em;
+    line-height: 96px;
+    color: rgba(241, 52, 99, 0.9);
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav ul li {
+    list-style: none;
+    margin-right: 5em;
+}
+.nav ul li:nth-last-of-type(1) {
+    margin: 0;
+}
+
+.nav li a {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3em;
+    line-height: 72px;
+    color: #7e6464;
+}
+
+/* Hidden Searchbox */
+.searchbox {
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+    text-align: right;
+    transition: 2s;
+    z-index: -3;
+}
+.searchbox.active {
+    top: 72px;
+}
+
+.searchbox input {
+    background: #fffffa;
+    border: 0;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 8px 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 22px;
+    line-height: 42px;
+    padding: 11px 48px;
+}
+
+.hero-section {
+    background: rgba(243, 82, 123, 0.9);
+    height: calc(100vh - 72px);
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+.hero-section h1 {
+    font-weight: bold;
+    font-size: 2.6em;
+    color: #423232;
+    margin-bottom: .5em;
+}
+.hero-section p {
+    width: 503px;
+    height: 130px;
+    left: 184px;
+    top: 448px;
+    font-size: 1.5em;
+    line-height: 1.4em;
+    color: #4A4A4A;
+    margin-right: 3em;
+}
+.hero-section .info {
+    margin-right: 3em;
+}
+
+.hero-section #signup-btn {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.3em;
+    color: #FFFFFF;
+    background: #4a4a4a;
+    border-radius: 8px;
+    border: none;
+    padding: .25em .9em;
+    display: inline-block;
+    transition: 1.3s linear all;
+}
+.hero-section #signup-btn:hover {
+    background-color: white;
+    color: #4a4a4a;
+}
+
+
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+.social-icons a {
+    margin: 2em 1em;
+    
+}
+.social-icons a:nth-of-type(1) {
+    margin-left: 0;
+}
+
+.hero-image img {
+    width: 24em;
+    position: absolute;
+    top: 0;
+    right: 0%;
+    left: 0;
+    bottom: 0;
+    margin-top: -10px;
+    margin-left: -7px;
+    transform: rotate(9deg);
+    transition: 1s ease-in-out;
+}
+.hero-image img:hover {
+    transform: rotate(-4deg);
+}
+
+.hero-image {
+    background: grey;
+    width: 22.2em;
+    height: 22.2em;
+    transform: rotate(-6deg);
+}
+
+/* Search and Close buttons */
+.nav-icons {
+    display: flex;
+    position: relative;
+    top: 35%;
+}
+.nav-icons img {
+    position: absolute;
+}
+.nav-icons .close-icon {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: 2s;
+}
+.nav-icons .search-icon {
+    transition: 2s;
+    pointer-events: auto;
+}
+
+.nav-icons.active .search-icon {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+}
+.nav-icons.active .close-icon {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
